@@ -5,7 +5,6 @@ def get_angle(a, b, c):
     angle = np.abs(np.degrees(radians))
     return angle
 
-
 def get_distance(landmark_ist):
     if len(landmark_ist) < 2:
         return

@@ -112,9 +112,6 @@ We've optimized for speed and smoothness:
 AI-Virtual-Mouse/
 ├── main.py          # Main app (start here!)
 ├── util.py          # Helper math functions
-├── requirements.txt # What to install
-├── TODO.md          # Our optimization notes
-├── LICENSE          # Open-source info
 └── README.md        # This guide
 ```
 

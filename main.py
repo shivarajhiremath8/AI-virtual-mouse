@@ -24,7 +24,6 @@ hands = mpHands.Hands(
     max_num_hands=1
 )
 
-# Initialize Kalman filter for smoother cursor tracking
 kalman = cv2.KalmanFilter(4, 2)
 kalman.measurementMatrix = np.array([[1, 0, 0, 0], [0, 1, 0, 0]], np.float32)
 kalman.transitionMatrix = np.array([[1, 0, 1, 0], [0, 1, 0, 1], [0, 0, 1, 0], [0, 0, 0, 1]], np.float32)
@@ -39,7 +38,6 @@ def find_finger_tip(processed):
     return None, None
 
 
-# Global variables for smoothing and debouncing
 prev_positions = []
 smooth_factor = 3
 last_click_time = 0
@@ -50,11 +48,10 @@ def move_mouse(index_finger_tip):
     if index_finger_tip is not None:
         x = int(index_finger_tip.x * screen_width)
         y = int(index_finger_tip.y * screen_height)
-        # Clamp to screen boundaries
+
         x = max(0, min(x, screen_width - 1))
         y = max(0, min(y, screen_height - 1))
 
-        # Use Kalman filter for prediction
         measurement = np.array([[np.float32(x)], [np.float32(y)]])
         kalman.correct(measurement)
         prediction = kalman.predict()
