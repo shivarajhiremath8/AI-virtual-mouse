@@ -3,3 +3,5 @@ mediapipe
 pyautogui
 pynput
 numpy
+
+
