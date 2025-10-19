@@ -112,6 +112,7 @@ We've optimized for speed and smoothness:
 AI-Virtual-Mouse/
 ├── main.py          # Main app (start here!)
 ├── util.py          # Helper math functions
+├── requirements.txt # Dependencies to install
 └── README.md        # This guide
 ```
 
