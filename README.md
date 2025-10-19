@@ -138,4 +138,5 @@ Follow Python best practices and add comments to your code.
 
 ---
 
-Enjoy controlling your mouse with gestures! If you have questions, open an issue. Happy coding!
+Enjoy controlling your mouse with gestures! If you have questions, open an issue.
+Happy coding!
